@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Itinerary Search</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search for Your Travel Itinerary</h1>
+    <form action="/search" method="POST">
+        <label for="city_name">City Name:</label>
+        <input type="text" name="city_name" id="city_name" required>
+
+        <label for="category">Category:</label>
+        <select name="category" id="category">
+            <option value="Romantic">Romantic</option>
+            <option value="Cultural">Cultural</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Beach & City">Beach & City</option>
+            <option value="Historical">Historical</option>
+        </select>
+
+        <label for="days">Number of Days:</label>
+        <input type="number" name="days" id="days" min="1" required>
+
+        <label for="start_date">Start Date:</label>
+        <input type="date" name="start_date" id="start_date" required>
+
+        <label for="end_date">End Date:</label>
+        <input type="date" name="end_date" id="end_date" required>
+
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
+

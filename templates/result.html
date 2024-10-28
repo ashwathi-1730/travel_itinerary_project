@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Itinerary Results</title>
+</head>
+<body>
+    <!-- Display itinerary if available -->
+    {% if itinerary %}
+    <h1>Travel Itinerary for {{ itinerary.city_name }}</h1>
+    <p><strong>Best Time to Travel:</strong> {{ itinerary.best_time_to_travel }}</p>
+    
+    <h2>Optimized Daily Plan:</h2>
+    <ul>
+        {% for day in range(days) %}
+        <li><strong>Day {{ day + 1 }}:</strong>
+            <ul>
+                {% for place in daily_plan[day] %}
+                <li>{{ place }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <!-- AI-Generated plan if no itinerary found -->
+    {% if generated_text %}
+    <h2>AI-Generated Daily Plan:</h2>
+    <ul>
+        {% for day in range(days) %}
+        <li><strong>Day {{ day + 1 }}:</strong> {{ generated_text[day] }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    <!-- Back to search button -->
+    <button onclick="window.location.href='/'">Back to Search</button>
+
+</body>
+</html>

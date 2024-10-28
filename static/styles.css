@@ -1,0 +1,46 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff6b81;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.trip-info, .daily-itinerary {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.trip-info ul, .daily-itinerary ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+h2 {
+    color: #ff6b81;
+}
+
+.day h3 {
+    margin-bottom: 10px;
+}
+
+ul li {
+    padding: 5px 0;
+}
+
+strong {
+    color: #ff6b81;
+}
